@@ -76,6 +76,7 @@ button {
   padding: 16px 32px;
   margin: 48px auto;
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .order-service-button:hover,
@@ -133,6 +134,15 @@ button {
   gap: 40px;
 }
 
+::after::content {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 4px;
+  background-color: #404bbf;
+  border-radius: 2px;
+}
+
 .menu-link {
   display: block;
   color: var(--color-dark);
@@ -142,6 +152,9 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   padding: 24px 0;
+  position: relative;
+  color: #404bbf;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-link:hover,
@@ -172,6 +185,7 @@ button {
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list-link:hover,
@@ -192,7 +206,7 @@ button {
   background-position: center center;
   background-size: cover;
   padding: 188px 0;
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -228,18 +242,13 @@ button {
 .page-benefits-icon {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 264px;
   height: 112px;
   background-color: var(--color-cloud);
   border-radius: 4px;
   border: 1px solid var(--color-light-slate);
   margin-bottom: 8px;
-}
-
-.page-benefits-icon-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .page-benefits-list {
@@ -296,6 +305,8 @@ button {
   border-radius: 0px 0px 4px 4px;
   background-color: #ffffff;
   width: calc((100% - 72px) / 4);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .container-our-team-name-position {
@@ -340,9 +351,11 @@ button {
   height: 40px;
   border-radius: 50%;
   background-color: var(--color-primary-brand);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-list-icon-link:hover {
+.social-list-icon-link:hover,
+.social-list-icon-link:focus {
   background-color: var(--color-pressed-state);
 }
 
@@ -442,18 +455,49 @@ button {
 }
 
 .social-media {
-  display: flex;
   color: var(--color-white-background);
   font-family: Roboto;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  margin-bottom: 16px;
 }
 
 .social-list-footer {
-  column-gap: 16px;
+  display: flex;
+  gap: 16px;
 }
 
 .social-media-footer {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-logotype {
+  margin-right: 120px;
+}
+
+.social-list-icon-footer {
+  width: 40px;
+  height: 40px;
+}
+
+.social-list-icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-primary-brand);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-list-icon-link:hover,
+.social-list-icon-link:focus {
+  background-color: var(--color-green);
+}
+
+.footer-social-media {
 }
