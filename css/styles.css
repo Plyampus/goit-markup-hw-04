@@ -7,6 +7,7 @@
   --color-cloud: #f4f4fd;
   --color-light-slate: #8e8f99;
   --color-green: #31d0aa;
+  --color-cornflower: #e7e9fc;
 }
 
 /* Common Styles */
@@ -23,7 +24,7 @@ h4,
 h5,
 h6,
 p {
-  margin-top: 0;
+  margin: 0;
 }
 
 ul,
@@ -88,7 +89,7 @@ button {
 .page-header {
   display: flex;
   background-color: var(--color-white-background);
-  border-bottom: 1px solid #e7e9fc;
+  border-bottom: 1px solid var(--color-cornflower);
   width: 1440px;
   margin: 0 auto;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
@@ -138,7 +139,7 @@ button {
 
 .menu-link {
   display: block;
-  color: var(--color-pressed-state);
+  color: var(--color-dark);
   font-style: normal;
   font-size: 16px;
   font-weight: 500;
@@ -149,7 +150,12 @@ button {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.menu-link::after {
+.current {
+  position: relative;
+  color: var(--color-pressed-state);
+}
+
+.current::after {
   content: "";
   position: absolute;
   left: 0;
@@ -282,7 +288,7 @@ button {
 
 /* 3 Our Team Styles */
 .our-team-section {
-  background-color: #f4f4fd;
+  background-color: var(--color-cloud);
   width: 1440px;
   margin: 0 auto;
   padding: 120px 0;
@@ -306,7 +312,7 @@ button {
 
 .our-team-list-item {
   border-radius: 0px 0px 4px 4px;
-  background-color: #ffffff;
+  background-color: var(--color-white-background);
   width: calc((100% - 72px) / 4);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -322,7 +328,7 @@ button {
 }
 
 .our-team-name-surename {
-  color: #2e2f42;
+  color: var(--color-dark);
   text-align: center;
   font-size: 20px;
   font-weight: 500;
@@ -331,19 +337,19 @@ button {
 }
 
 .our-team-position {
-  color: #434455;
+  color: var(--color-prymary-text);
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-align: center;
+  margin-bottom: 8px;
 }
 
 .social-list-icons {
   display: flex;
   justify-content: center;
   gap: 24px;
-  padding-bottom: 32px;
 }
 
 .social-list-icon-link-team {
@@ -368,7 +374,7 @@ button {
 
 /* 4 Our Portfolio Styles */
 .our-portfolio-section {
-  background-color: #ffffff;
+  background-color: var(--color-white-background);
   width: 1440px;
   margin: 0 auto;
   padding: 120px 0 120px 0;
@@ -430,12 +436,12 @@ button {
 
 .container-our-portfolio-progect-category {
   padding: 32px 16px;
-  border: 1px solid #e7e9fc;
+  border: 1px solid var(--color-cornflower);
   border-top: 0;
 }
 
 .our-portfolio-name-progect {
-  color: #2e2f42;
+  color: var(--color-dark);
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
@@ -444,7 +450,7 @@ button {
 }
 
 .our-portfolio-progect-category {
-  color: #434455;
+  color: var(--color-prymary-text);
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
@@ -472,7 +478,7 @@ button {
 }
 
 .logotype-studio-footer {
-  color: #f4f4fd;
+  color: var(--color-cloud);
   font-size: 18px;
   font-weight: 700;
   line-height: 21px;
@@ -482,7 +488,7 @@ button {
 }
 
 .footer-description {
-  color: #f4f4fd;
+  color: var(--color-cloud);
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -533,7 +539,4 @@ button {
 .social-list-icon-link:hover,
 .social-list-icon-link:focus {
   background-color: var(--color-green);
-}
-
-.footer-social-media {
 }
